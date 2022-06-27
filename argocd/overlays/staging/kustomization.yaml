@@ -1,0 +1,13 @@
+bases:
+- ../../base
+
+# https://fabianlee.org/2022/04/15/kubernetes-kustomize-transformations-with-patchesjson6902/
+# https://github.com/fabianlee/kustomize-overlays-with-reload/blob/main/overlays/tiny-tools-ds-to-dep/kustomization.yaml
+patches:
+- target:
+    kind: Deployment
+    name: website
+  patch: |-
+    - op: replace
+      path: /spec/template/spec/containers/0/image
+      value: xxxxx.dkr.ecr.eu-west-3.amazonaws.com/multienv-vote-feature-two:xxxxx

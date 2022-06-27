@@ -1,0 +1,12 @@
+.ignore
+.terraform*
+terraform.plan
+terraform.tfvars
+tfplan
+*.tfstate
+*.tfstate.backup
+node_modules
+package-lock.json
+.env*
+aws-auth-configmap.json
+aws-auth-configmap.yaml
